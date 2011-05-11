@@ -184,3 +184,11 @@ div.field, div.actions {
 }
 
 
+/* styling for user listing. */
+ul.users {
+  margin-top: 1em;
+}
+
+.users li {
+  list-style: none;
+}
