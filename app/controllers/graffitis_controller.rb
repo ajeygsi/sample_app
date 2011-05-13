@@ -9,6 +9,7 @@ uses_tiny_mce :options => {
   def new
     @title = "Graffiti page"
     @graffiti = Graffiti.new
+    @writings = Graffiti.all
   end
 
   def show

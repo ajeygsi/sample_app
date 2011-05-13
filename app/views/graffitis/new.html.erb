@@ -9,8 +9,12 @@
   <%= f.submit "Paint" %>
 </div>
 <% end %>
+<br/>
 
-
+<h1>Graffiti !!! </h1>
+<% for i in 1..@writings.count %>
+<hr> <%= raw @writings[@writings.count - i].textdata %><br/>
+<% end %>
 
 
 
