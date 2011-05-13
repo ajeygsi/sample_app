@@ -10,7 +10,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110512084908) do
+ActiveRecord::Schema.define(:version => 20110513053325) do
+
+  create_table "graffitis", :force => true do |t|
+    t.string   "textdata"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "microposts", :force => true do |t|
     t.string   "content"

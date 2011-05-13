@@ -1,0 +1,4 @@
+<h1>Graffiti !!! </h1>
+<% for i in 1..@graffiti.count %>
+<%= @graffiti[i-1].id %> : <%= raw @graffiti[i-1].textdata %><br/>
+<% end %>

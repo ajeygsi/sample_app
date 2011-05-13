@@ -1,0 +1,12 @@
+<h1>Wanna paint ??</h1>
+<%= form_for(@graffiti) do |f| %>
+<div class = "field">
+  <%= f.label :textdata %><br/>
+  <%= f.text_field :textdata %>
+</div>
+<div class="actions">
+  <%= f.submit "Paint" %>
+</div>
+<% end %>
+
+
