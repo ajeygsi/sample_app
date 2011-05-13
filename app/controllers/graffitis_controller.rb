@@ -13,7 +13,12 @@ class GraffitisController < ApplicationController
     redirect_to new_graffiti_path
   end
 
+  # def create
+  #   @received_params = params[:graffiti]
+  # end
+
   def create
+    debugger
     @graffiti = Graffiti.new(params[:graffiti])
     @graffiti.save
     redirect_to new_graffiti_path
