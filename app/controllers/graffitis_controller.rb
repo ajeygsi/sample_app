@@ -1,4 +1,11 @@
 class GraffitisController < ApplicationController
+uses_tiny_mce :options => {
+                            :theme => 'advanced',
+                            :theme_advanced_resizing => true,
+                            :theme_advanced_resize_horizontal => false,
+                            :plugins => %w{ table fullscreen }
+                          }
+
   def new
     @title = "Graffiti page"
     @graffiti = Graffiti.new
@@ -18,7 +25,6 @@ class GraffitisController < ApplicationController
   # end
 
   def create
-    debugger
     @graffiti = Graffiti.new(params[:graffiti])
     @graffiti.save
     redirect_to new_graffiti_path
