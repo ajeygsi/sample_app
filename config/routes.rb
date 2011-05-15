@@ -1,5 +1,7 @@
 SampleApp::Application.routes.draw do
 
+  resources :graffitis
+
   resources :comments do
     resources :comments 
   end

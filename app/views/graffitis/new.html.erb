@@ -1,0 +1,20 @@
+<h1>Wanna paint ??</h1>
+<%= form_for(@graffiti) do |f| %>
+<div class = "field">
+<%= include_tiny_mce_if_needed %>
+<%= f.label :textdata %><br/>
+<%= f.text_area :textdata, :class => "mceEditor" %><br/>
+</div>
+<div class="actions">
+  <%= f.submit "Paint" %>
+</div>
+<% end %>
+<br/>
+
+<h1>Graffiti !!! </h1>
+<% for i in 1..@writings.count %>
+<hr> <%= raw @writings[@writings.count - i].textdata %><br/>
+<% end %>
+
+
+
