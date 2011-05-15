@@ -1,0 +1,14 @@
+<h1>New comment</h1>
+<%= form_for @comment do |f| %>
+<%= f.label :title, 'Title' %>:
+<%= f.text_field :title %><br/>
+<%= f.label :body, 'Body' %>:<br/>
+<%= f.text_area :body %><br/>
+<%= f.label :commentable_id, 'id' %>:
+<%= f.text_field :commentable_id %><br/>
+<%= f.label :commentable_type, 'type' %>:
+<%= f.text_field :commentable_type %><br/>
+<div class="actions">
+  <%= f.submit "Submit"%>
+</div>
+<% end %>
