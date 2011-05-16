@@ -1,10 +1,13 @@
+<b>Micropost : </b>
+<div class="micropost-box">
 <div class="body">
  <h2> <%= @micropost.content %></h2>
 </div>
+</div>
 <br/>
-Comments : 
+<b>Comments : </b>
 <br/>
-<%= link_to 'Add a Comment', new_micropost_comment_path(@micropost) %>
+<%= link_to 'add', new_micropost_comment_path(@micropost) %>
 <ul class="comment_list">
   <%= render :partial => 'comments/comment', :collection => @micropost.comments %>
 </ul>

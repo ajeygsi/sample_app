@@ -1,8 +1,9 @@
 <li class="comment">
-  <%= comment.title %> : <%= comment.body %><br/>
-  <%= link_to 'Add a Reply', new_comment_comment_path(comment) %><br/>
+  <div class="comment-box">
+  <u><%= comment.title %></u> :  <%= raw comment.body %> <%= link_to 'say', new_comment_comment_path(comment) %>
+  </div>
   <% unless comment.comments.empty? %>
-    <ul class="comment_list">
+  <ul class="comment_list">
       <%= render :partial => 'comments/comment', :collection => comment.comments %>
     </ul>
   <% end %>
