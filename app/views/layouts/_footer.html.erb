@@ -1,10 +1,18 @@
 <footer>
   <nav class="round">
     <ul>
+      <% dt = "";
+	 dt = dt + Time.now.day.to_s;
+	 dt = dt + "-";
+	 dt = dt + Time.now.month.to_s;
+	 dt = dt + "-";
+	 dt = dt + Time.now.year.to_s;
+	 %>
       <li><%= link_to "About", about_path %></li>
       <li><%= link_to "Contact", contact_path %></li>
       <li><a href="http://news.railstutorial.org/">News</a></li>
       <li><a href="http://www.railstutorial.org/">Rails Tutorial</a></li>
+      <li><%= dt %></li>
     </ul>
   </nav>
 </footer>

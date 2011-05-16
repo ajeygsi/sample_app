@@ -257,6 +257,9 @@ padding:10px;
 border:1px solid gray;
 background-color : #CCFFFF;
 margin:0px;
+-moz-border-radius:    10px;
+-webkit-border-radius: 10px;
+border-radius:         10px;
 
 }
 
@@ -266,4 +269,7 @@ padding:10px;
 border:1px solid gray;
 background-color : #FFFFCC;
 margin:0px;
+-moz-border-radius:    10px;
+-webkit-border-radius: 10px;
+border-radius:         10px;
 }
