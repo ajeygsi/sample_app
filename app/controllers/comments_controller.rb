@@ -21,10 +21,25 @@ class CommentsController < ApplicationController
 
     @comment = @parent.comments.build(params[:comment])
     @comment.save
-    redirect_to root_path
+    
+    # trying to redirect to posts page.
+    @micropost = get_micropost(@comment)
+
+    redirect_to @micropost
   end
   
   protected
+
+  def get_micropost(c)
+    if(c.commentable_type == "Micropost")
+      micropost = Micropost.find_by_id(c.commentable_id)
+      micropost
+    else
+      parent_comment = Comment.find_by_id(c.commentable_id)
+      get_micropost(parent_comment)
+    end
+  end
+
   
   def get_parent
     @parent = Micropost.find_by_id(params[:micropost_id]) if params[:micropost_id]
